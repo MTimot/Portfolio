@@ -1,8 +1,23 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Career from "../../components/Career/Career";
 import Project from "../../components/Projects/Projects";
 import Contact from "../../components/contact/Contact";
 
 function Homepage() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 50);
+    }
+  }, [location]);
+
   return (
     <main>
       <article className="photo-card">

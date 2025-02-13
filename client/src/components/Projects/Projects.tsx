@@ -8,7 +8,7 @@ function Project() {
     technos: string;
     main_screen: string;
     screenshot2: string;
-    screeshot3: string;
+    screenshot3: string;
     description: string;
   }
   const [project, setProject] = useState([] as Project[]);
@@ -18,7 +18,7 @@ function Project() {
       .then((data) => setProject(data));
   }, []);
   return (
-    <article className="project-article">
+    <article className="project-article" id="projets">
       <h2 className="project-h2-title">Mes projets</h2>
       <div className="project-all-cards">
         {project.map((element) => (

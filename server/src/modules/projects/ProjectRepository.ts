@@ -7,7 +7,7 @@ type Project = {
   technos: string;
   main_screen: string;
   screenshot2: string;
-  screeshot3: string;
+  screenshot3: string;
   description: string;
 };
 
@@ -29,6 +29,45 @@ class ProjectRepository {
 
     // Return the first row of the result, which represents the item
     return rows[0] as Project;
+  }
+  async create(project: Omit<Project, "id">) {
+    // Execute the SQL INSERT query to add a new item to the "item" table
+    const [result] = await databaseClient.query<Result>(
+      "insert into project (title, technos, main_screen, screenshot2, screenshot3,description) values (?, ?, ?, ?, ?, ?)",
+      [
+        project.title,
+        project.technos,
+        project.main_screen,
+        project.screenshot2,
+        project.screenshot3,
+        project.description,
+      ],
+    );
+
+    // Return the ID of the newly inserted item
+    return result.insertId;
+  }
+  async update(project: Project) {
+    const [result] = await databaseClient.query<Result>(
+      "UPDATE project SET title = ?, technos = ?, main_screen = ?, screenshot2 = ?, screenshot3 = ?, description = ? WHERE id = ?",
+      [
+        project.title,
+        project.technos,
+        project.main_screen,
+        project.screenshot2,
+        project.screenshot3,
+        project.description,
+        project.id,
+      ],
+    );
+    return result.affectedRows;
+  }
+  async delete(id: number) {
+    const [result] = await databaseClient.query<Result>(
+      "DELETE FROM project WHERE id = ?",
+      [id],
+    );
+    return result.affectedRows;
   }
 }
 

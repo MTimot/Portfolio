@@ -18,6 +18,9 @@ router.post("/api/items", itemActions.add);
 router.get("/api/career", careerActions.browse);
 router.get("/api/project", projectActions.browse);
 router.get("/api/project/:id", projectActions.read);
+router.post("/api/project", projectActions.add);
+router.put("/api/project/:id", projectActions.edit);
+router.delete("/api/project/:id", projectActions.destroy);
 /* ************************************************************************* */
 
 export default router;

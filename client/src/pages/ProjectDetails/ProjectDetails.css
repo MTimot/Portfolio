@@ -1,0 +1,21 @@
+.project-details-screen {
+  width: 800px;
+  border-radius: 20px;
+}
+.carrousel {
+  margin: auto;
+  width: 800px;
+}
+.project-details-h1 {
+  margin: auto;
+}
+.project-details-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.project-details-description {
+  margin-bottom: 5rem;
+  width: 50%;
+}

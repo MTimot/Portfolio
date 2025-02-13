@@ -40,7 +40,18 @@
 
 .project-all-cards {
   display: flex;
-
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   justify-self: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .project-card {
+    width: 300px;
+    height: unset;
+  }
+  .project-img {
+    height: 110px;
+  }
 }

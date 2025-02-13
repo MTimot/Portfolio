@@ -8,11 +8,15 @@ function Navbar() {
           <h2 className="nav-title">Timothey Mesmacque</h2>
         </Link>
         <ul className="nav-list">
-          <li>
-            <a href="#parcours">Mon parcours</a>
-          </li>
-          <li>Mes projets</li>
-          <li>Contact</li>
+          <Link to="/#parcours">
+            <li>Mon parcours</li>
+          </Link>
+          <Link to="/#projets">
+            <li>Mes projets</li>
+          </Link>
+          <Link to="/#contact">
+            <li>Contact</li>
+          </Link>
         </ul>
       </nav>
     </header>

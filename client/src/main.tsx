@@ -7,6 +7,10 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
+import Admin from "./pages/Admin/Admin";
+import ProjectDelete from "./pages/Admin/Projects/DeleteProject";
+import ProjectEdit from "./pages/Admin/Projects/EditProject";
+import NewProject from "./pages/Admin/Projects/NewProject";
 import Homepage from "./pages/Homepage/Homepage";
 import ProjectDetails from "./pages/ProjectDetails/ProjectDetails";
 
@@ -32,6 +36,22 @@ const router = createBrowserRouter([
       {
         path: "/project/:id",
         element: <ProjectDetails />,
+      },
+      {
+        path: "/admin",
+        element: <Admin />,
+      },
+      {
+        path: "/newProject",
+        element: <NewProject />,
+      },
+      {
+        path: "/editProject/:id",
+        element: <ProjectEdit />,
+      },
+      {
+        path: "/DeleteProject/:id",
+        element: <ProjectDelete />,
       },
     ],
   },

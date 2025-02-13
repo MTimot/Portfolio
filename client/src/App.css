@@ -50,3 +50,21 @@ body {
   font-size: 1.2rem;
   line-height: 2rem;
 }
+a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .picture-of-me {
+    height: 125px;
+  }
+  .introduction-p {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .photo-card {
+    flex-direction: column;
+  }
+}

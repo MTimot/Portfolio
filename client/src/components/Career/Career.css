@@ -33,3 +33,9 @@
 .career-h2-title {
   margin-bottom: 3rem;
 }
+@media screen and (max-width: 1024px) {
+  .career-card {
+    padding: 1rem;
+    width: 100%;
+  }
+}
