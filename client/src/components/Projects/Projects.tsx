@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Project.css";
+import { Link } from "react-router-dom";
 function Project() {
   interface Project {
     id: number;
@@ -25,9 +26,11 @@ function Project() {
             <h3 className="project-title">{element.title}</h3>
             <img className="project-img" src={element.main_screen} alt="" />
             <p className="project-p">{element.technos}</p>
-            <button className="project-button" type="button">
-              Détails
-            </button>
+            <Link to={`/project/${element.id}`}>
+              <button className="project-button" type="button">
+                Détails
+              </button>
+            </Link>
           </section>
         ))}
       </div>

@@ -19,6 +19,17 @@ class ProjectRepository {
     // Return the array of items
     return rows as Project[];
   }
+
+  async read(id: number) {
+    // Execute the SQL SELECT query to retrieve a specific item by its ID
+    const [rows] = await databaseClient.query<Rows>(
+      "select * from project where id = ?",
+      [id],
+    );
+
+    // Return the first row of the result, which represents the item
+    return rows[0] as Project;
+  }
 }
 
 export default new ProjectRepository();

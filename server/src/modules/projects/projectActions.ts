@@ -12,4 +12,18 @@ const browse: RequestHandler = async (req, res, next) => {
   }
 };
 
-export default { browse };
+const read: RequestHandler = async (req, res, next) => {
+  try {
+    const projectId = Number(req.params.id);
+    const project = await ProjectRepository.read(projectId);
+
+    if (project == null) {
+      res.sendStatus(404);
+    } else {
+      res.json(project);
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+export default { browse, read };
