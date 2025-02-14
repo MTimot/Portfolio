@@ -3,7 +3,8 @@
 :root {
   --primary-color: #140f2e;
   --secondary-color: #30246b;
-  --font-color: rgb(0, 66, 255);
+  --tertiary-color: #003b94;
+  --font-color: #d1e3ff;
   --shadow: rgb(26, 26, 26);
   --font: "Quicksand", serif;
 }

@@ -1,10 +1,10 @@
 .project-details-screen {
-  width: 800px;
+  width: 100%;
   border-radius: 20px;
 }
 .carrousel {
   margin: auto;
-  width: 800px;
+  width: 70%;
 }
 .project-details-h1 {
   margin: auto;
@@ -18,4 +18,20 @@
 .project-details-description {
   margin-bottom: 5rem;
   width: 50%;
+}
+@media screen and (max-width: 1024px) {
+  .project-details-screen {
+    width: 100%;
+  }
+  .carrousel {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .project-details-screen {
+    width: 100%;
+  }
+  .carrousel {
+    width: 80%;
+  }
 }

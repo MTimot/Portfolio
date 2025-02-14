@@ -23,10 +23,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 19%;
+  width: 30%;
 }
 .contact-button {
-  background-color: var(--font-color);
+  margin-top: 2rem;
+  background-color: var(--tertiary-color);
   padding: 1rem;
   border-radius: 30px;
   width: 150px;
@@ -41,8 +42,16 @@
   transform: scale(0.95);
   transform: translate(2px, 2px);
 }
+.contact-textarea {
+  height: 200px;
+}
 @media screen and (max-width: 1024px) {
   .contact-label {
-    width: 70%;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact-label {
+    width: 80%;
   }
 }
